@@ -3,8 +3,8 @@ package com.example.portfolioapi.services;
 import java.util.List;
 import java.util.Optional;
 
-import com.example.tareasapi.models.PersonaModel;
-import com.example.tareasapi.repos.PersonaRepo;
+import com.example.portfolioapi.models.PersonaModel;
+import com.example.portfolioapi.repos.PersonaRepo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

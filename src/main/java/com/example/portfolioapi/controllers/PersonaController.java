@@ -2,8 +2,8 @@ package com.example.portfolioapi.controllers;
 
 import java.util.List;
 
-import com.example.tareasapi.models.PersonaModel;
-import com.example.tareasapi.services.PersonaService;
+import com.example.portfolioapi.models.PersonaModel;
+import com.example.portfolioapi.services.PersonaService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

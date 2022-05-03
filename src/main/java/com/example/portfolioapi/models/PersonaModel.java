@@ -39,7 +39,7 @@ public class PersonaModel {
         this.password = password;
     }
 
-    public PersonaModel(int idpersona, String nombre, String apellido, String email, String titulo, String telefono, String ubicacion, String acerca, String fotourl, String username, String password) {
+    public PersonaModel(String nombre, String apellido, String email, String titulo, String telefono, String ubicacion, String acerca, String fotourl, String username, String password) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;

@@ -14,7 +14,6 @@ public class PersonaModel {
     //@Column(unique = true, nullable = false)
     public int idpersona;
     
-    @Basic
     private String nombre;
     private String apellido;
     private String email;

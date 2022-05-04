@@ -8,7 +8,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-<<<<<<< HEAD
 @Table(name = "Proyecto")
 public class ProyectoModel {
     

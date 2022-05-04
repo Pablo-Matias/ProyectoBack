@@ -49,7 +49,7 @@ public class EducacionModel {
    }
 
     public int getidEducacion() {
-        return ideducacion
+        return ideducacion;
     }
 
     public void setIdEducacion(int ideducacion) {

@@ -3,7 +3,7 @@ package com.example.portfolioapi.controllers;
 import java.util.List;
 
 import com.example.portfolioapi.models.SkillModel;
-import com.example.portfolioapi.services.SkillService;
+import com.example.portfolioapi.services.SkillServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class SkillController {
     
     @Autowired
-    private SkillService skillService;
+    private SkillServices skillService;
 
     @GetMapping
     public List<SkillModel> getAll() {
@@ -49,7 +49,7 @@ public class SkillController {
         }
     }
 
-    @DeleteMapping("/{id}")
+    /*@DeleteMapping("/{id}")
     public ResponseEntity eliminarPorId(@PathVariable(value = "id") int id) {
         ResponseEntity response = null;
         if(skillService.getById(id) == null) {
@@ -60,6 +60,6 @@ public class SkillController {
             response= ResponseEntity.ok("SE ELIMINÓ LA EDUCACIÓN CON ID " + id);
         }
         return response;
-    }
+    }*/
 
 }

@@ -31,24 +31,9 @@ public class SkillServices {
     public SkillModel save( SkillModel skill) {
         return skillRepo.save(skill); // crear o actualizar
     }
+
     public void delete(int id) {
         skillRepo.deleteById(id);
-    } 
-    public List<SkillModel> getAll(String name) {
-        return skillRepo.findAll(name);
     }
-    Service> getAll()
-    { return (List<SkillModel>) skillRepo.findAll();
-    }    
-    public ResponseEntity<SkillModel> getById(int id) {
-        Optional<SkillModel> skill = skillRepo.findById(id);
-        if (skill.isPresent()) {
-            return ResponseEntity.ok().body(skill.get());
-        } else {
-            return ResponseEntity.notFound().build();
-        }
-   }
-    public SkillModel save(SkillModel skill) {
-        return skillRepo.save(skill); // crear o actualizar
-    }
+
 }

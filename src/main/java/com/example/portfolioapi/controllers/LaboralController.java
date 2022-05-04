@@ -3,6 +3,7 @@ package com.example.portfolioapi.controllers;
 import java.util.List;
 
 import com.example.portfolioapi.models.LaboralModel;
+import com.example.portfolioapi.services.LaboralService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

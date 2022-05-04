@@ -6,10 +6,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.Getter;
-import lombok.Setter;
 
-@Getter @Setter
+
+
 @Entity
 @Table(name = "skill")
 public class SkillModel {
@@ -17,7 +16,7 @@ public class SkillModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     //@Column(unique = true, nullable = false)
-    public int idskill;
+    private int idskill;
     
     private String titulo;
     
@@ -42,6 +41,41 @@ public class SkillModel {
         this.persona = persona;
     }
 
+    public int getIdskill() {
+        return idskill;
+    }
+
+    public void setIdskill(int idskill) {
+        this.idskill = idskill;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public int getDominio() {
+        return dominio;
+    }
+
+    public void setDominio(int dominio) {
+        this.dominio = dominio;
+    }
+
+    public int getPersona() {
+        return persona;
+    }
+
+    public void setPersona(int persona) {
+        this.persona = persona;
+    }
+
+    
+    
+    
     @Override
     public String toString() {
         return "SkillModel{" + "idskill=" + idskill + ", titulo=" + titulo + ", dominio=" + dominio + ", persona=" + persona + '}';

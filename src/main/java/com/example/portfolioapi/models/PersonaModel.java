@@ -12,8 +12,7 @@ public class PersonaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     //@Column(unique = true, nullable = false)
-    public int idpersona;
-    
+    private int idpersona;
     private String nombre;
     private String apellido;
     private String email;

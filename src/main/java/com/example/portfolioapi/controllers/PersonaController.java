@@ -42,8 +42,8 @@ public class PersonaController {
     public ResponseEntity<PersonaModel> update(@PathVariable(value = "id") int id,
             @Validated @RequestBody PersonaModel persona) {
         if (id == persona.getIdpersona()) {
-            PersonaModel taskNew = personaService.save(persona);
-            return ResponseEntity.ok().body(taskNew);
+            PersonaModel personaNew = personaService.save(persona);
+            return ResponseEntity.ok().body(personaNew);
         } else {
             return ResponseEntity.badRequest().build();
         }

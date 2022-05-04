@@ -8,25 +8,25 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "proyecto")
+@Table(name = "Proyecto")
 public class ProyectoModel {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     //@Column(unique = true, nullable = false)
     public int idproyecto;
-    
+
     //@Basic
     private String titulo;
     private String descripcion;
     
     private String url;
     private int persona;
-    
-   
+
 
     public ProyectoModel() {
     }
+
 
     public ProyectoModel(int idproyecto, String titulo, String descripcion, String url, int persona) {
         this.idproyecto = idproyecto;
@@ -35,6 +35,7 @@ public class ProyectoModel {
         this.url = url;
         this.persona = persona;
     }
+
 
     public ProyectoModel(String titulo, String descripcion, String url, int persona) {
         this.titulo = titulo;
@@ -87,12 +88,6 @@ public class ProyectoModel {
     public String toString() {
         return "ProyectoModel{" + "idproyecto=" + idproyecto + ", titulo=" + titulo + ", descripcion=" + descripcion + ", url=" + url + ", persona=" + persona + '}';
     }
-    
-    
-    
-    
-    
-   
     
 }
 

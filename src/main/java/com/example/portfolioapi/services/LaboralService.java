@@ -23,7 +23,7 @@ public class LaboralService {
         return (List<LaboralModel>) expeRepo.findAll();
     }
     
-    public ResponseEntity<LaboralModel> getById(long id) {
+    public ResponseEntity<LaboralModel> getById(int id) {
 
         Optional<LaboralModel> laboral = expeRepo.findById(id);
 
@@ -38,8 +38,8 @@ public class LaboralService {
         return expeRepo.save(laboral); // crea o actualiza
     }
     
-    public void delete(long id){
-        expeRepo.deleteById(id);
-    }
+    //public void delete(long id){
+    //    expeRepo.deleteById(id);
+    //}
     
 }

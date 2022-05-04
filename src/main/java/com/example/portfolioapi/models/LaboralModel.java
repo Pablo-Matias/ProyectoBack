@@ -61,4 +61,68 @@ public class LaboralModel {
     }
 
 
+    public int getIdlaboral() {
+        return this.idlaboral;
+    }
+
+    public void setIdlaboral(int idlaboral) {
+        this.idlaboral = idlaboral;
+    }
+
+    public String getPuesto() {
+        return this.puesto;
+    }
+
+    public void setPuesto(String puesto) {
+        this.puesto = puesto;
+    }
+
+    public String getDescripcion() {
+        return this.descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public String getEmpresa() {
+        return this.empresa;
+    }
+
+    public void setEmpresa(String empresa) {
+        this.empresa = empresa;
+    }
+
+    public LocalDate getInicio() {
+        return this.inicio;
+    }
+
+    public void setInicio(LocalDate inicio) {
+        this.inicio = inicio;
+    }
+
+    public LocalDate getFin() {
+        return this.fin;
+    }
+
+    public void setFin(LocalDate fin) {
+        this.fin = fin;
+    }
+
+    public String getFotourl() {
+        return this.fotourl;
+    }
+
+    public void setFotourl(String fotourl) {
+        this.fotourl = fotourl;
+    }
+
+    public int getPersona() {
+        return this.persona;
+    }
+
+    public void setPersona(int persona) {
+        this.persona = persona;
+    }
+
 }

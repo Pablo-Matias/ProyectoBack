@@ -3,7 +3,6 @@
 package com.example.portfolioapi.repos;
 
 import com.example.portfolioapi.models.LaboralModel;
-import java.util.Optional;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -14,8 +13,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface LaboralRepo extends CrudRepository<LaboralModel, Integer> {
 
-    public Optional<LaboralModel> findById(long id);
+    //public Optional<LaboralModel> findById(int id);
 
-    public void deleteById(long id);
+    //public void deleteById(long id);
     
 }

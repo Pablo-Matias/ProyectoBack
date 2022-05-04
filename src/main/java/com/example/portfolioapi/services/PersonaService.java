@@ -33,4 +33,8 @@ public class PersonaService {
     public PersonaModel save(PersonaModel persona) {
         return personaRepo.save(persona); // crear o actualizar
     }
+
+    public void delete(int id) {
+        personaRepo.deleteById(id);
+    }
 }

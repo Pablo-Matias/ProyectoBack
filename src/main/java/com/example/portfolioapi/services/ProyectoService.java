@@ -30,7 +30,7 @@ public class ProyectoService {
         }
     }
 
-    public ProyectoModel save(ProyectoModel persona) {
-        return proyectoRepo.save(persona); // crear o actualizar
+    public ProyectoModel save(ProyectoModel proyecto) {
+        return proyectoRepo.save(proyecto); // crear o actualizar
     }
 }

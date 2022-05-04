@@ -48,4 +48,8 @@ public class PersonaController {
         }
     }
 
+    @DeleteMapping("/{id}")
+    public PersonaModel delete((@PathVariable(value = "id") int id, @Validated @RequestBody PersonaModel persona) {
+        return personaService.delete(id);
+    }
 }

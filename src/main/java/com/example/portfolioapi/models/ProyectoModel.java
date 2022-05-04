@@ -1,6 +1,5 @@
 package com.example.portfolioapi.models;
 
-import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

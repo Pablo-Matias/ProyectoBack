@@ -49,7 +49,15 @@ public class PersonaController {
     }
 
     @DeleteMapping("/{id}")
-    public PersonaModel delete((@PathVariable(value = "id") int id, @Validated @RequestBody PersonaModel persona) {
-        return personaService.delete(id);
+    public ResponseEntity delete(@PathVariable Integer id){
+        ResponseEntity response = null;
+        if(PersonaService.getById(id) == null) {
+            response = new ResponseEntity(HttpStatus.NOT_FOUND); // 404 not found se podria cambiar por un mensaje personalizado?
+        }
+        else{
+            PersonaService.delete(id);
+            response= ResponseEntity.ok("Se eliminó la persona con Id " + id);
+        }
+        return response;
     }
 }

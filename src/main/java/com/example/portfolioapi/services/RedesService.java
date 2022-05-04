@@ -34,7 +34,13 @@ public class RedesService {
         return redesRepo.save(red);
     }
 
-    public void delete(int id) {
-        redesRepo.deleteById(id);
+    public boolean delete(int id) {
+        try {
+            redesRepo.deleteById(id);
+            return true;
+        } catch(Exception err){
+            return false;
+        }
     }
+    
 }

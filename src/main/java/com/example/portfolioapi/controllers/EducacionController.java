@@ -40,7 +40,7 @@ public class EducacionController {
     
     @PutMapping("/{id}")
     public ResponseEntity<EducacionModel> update(@PathVariable(value = "id") int id, @Validated @RequestBody EducacionModel educacion) {
-        if (id == educacion.getidEducacion()) {
+        if (id == educacion.getIdeducacion()) {
             EducacionModel taskNew = educacionService.save(educacion);
             return ResponseEntity.ok().body(taskNew);
         } else {

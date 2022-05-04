@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "ProyectoModel")
+@Table(name = "Proyecto")
 public class ProyectoModel {
     
     @Id
@@ -17,16 +17,20 @@ public class ProyectoModel {
     public int idproyecto;
     
     @Basic
-    private String proyecto;
-    private String descrip;
+    private String titulo;
+    private String descripcion;
     private String url;
-    
-    public ProyectoModel(int idproyecto, String descrip, String url) {
+
+    public ProyectoModel() {
+    }
+
+    public ProyectoModel(int idproyecto, String titulo, String descripcion, String url) {
         this.idproyecto = idproyecto;
-        this.descrip = descrip;
+        this.titulo = titulo;
+        this.descripcion = descripcion;
         this.url = url;
     }
-    
+
     public int getIdproyecto() {
         return idproyecto;
     }
@@ -34,21 +38,21 @@ public class ProyectoModel {
     public void setIdproyecto(int idproyecto) {
         this.idproyecto = idproyecto;
     }
-    
-    public String getProyecto() {
-        return proyecto;
+
+    public String getTitulo() {
+        return titulo;
     }
-    
-    public void setProyecto(String proyecto) {
-        this.proyecto = proyecto;
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
-    
-    public String getDescrip() {
-        return descrip;
+
+    public String getDescripcion() {
+        return descripcion;
     }
-    
-    public void setDescrip(String descrip) {
-        this.descrip = descrip;
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
     
     public String getUrl() {
@@ -64,7 +68,7 @@ public class ProyectoModel {
     
     @Override
     public String toString() {
-        return "ProyectoModel{" + "idproyecto=" + idproyecto + ", description=" + descrip + ", url=" + url + '}';
+        return "ProyectoModel{" + "idproyecto=" + idproyecto + ", titulo=" + titulo + ", descripcion=" + descripcion + ", url=" + url + '}';
     }
     
 }

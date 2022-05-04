@@ -17,12 +17,10 @@ public class EducacionModel {
     private String institucion; 
     private String institucionurl;
     private String fotourl;
-    @ManyToOne
-    @JoinColumn(name = "persona_idpersona")
-    private PersonaModel persona;
+    private String persona;
   
 
-    public EducacionModel( int ideducacion, String titulo, LocalDate fechafin, String institucion, String institucionurl, String fotourl, PersonaModel persona)
+    public EducacionModel( int ideducacion, String titulo, LocalDate fechafin, String institucion, String institucionurl, String fotourl, String persona)
      {
         this.ideducacion = ideducacion;
         this.titulo = titulo;
@@ -37,7 +35,7 @@ public class EducacionModel {
                
     }
 
-    public EducacionModel( String titulo, LocalDate fechafin, String institucion, String institucionurl, String fotourl, PersonaModel persona)
+    public EducacionModel( String titulo, LocalDate fechafin, String institucion, String institucionurl, String fotourl, String persona)
     {
        this.titulo = titulo;
        this.fechafin = fechafin;
@@ -47,12 +45,12 @@ public class EducacionModel {
        this.persona = persona;
    }
 
-    public int getidEducacion() {
+    public int getIdeducacion() {
         return ideducacion;
     }
 
-    public void setIdEducacion(int ideducacion) {
-        this.ideducacion = ideducacion;        
+    public void setIdeducacion(int ideducacion) {
+        this.ideducacion = ideducacion;
     }
 
     public String getTitulo() {
@@ -95,17 +93,18 @@ public class EducacionModel {
         this.fotourl = fotourl;
     }
 
-    public PersonaModel getPersona() {
+
+    public String getPersona() {
         return persona;
     }
 
-    public void setPersona(PersonaModel persona) {
+    public void setPersona(String persona) {
         this.persona = persona;
     }
 
     @Override
     public String toString() {
-        return "EducacionModel{" + "ideducacion=" + ideducacion + ", titulo=" + titulo + ", fechafin=" + fechafin + ", institucion=" + institucion + ", institucionurl=" + institucionurl + ", fotourl=" + fotourl + ", persona=" + persona + '}';
+        return "EducacionModel{" + "ideducacion=" + ideducacion + ", titulo=" + titulo + ", fechafin=" + fechafin + ", institucion=" + institucion + ", institucionurl=" + institucionurl + ", fotourl=" + fotourl  + '}';
     }
 
 }

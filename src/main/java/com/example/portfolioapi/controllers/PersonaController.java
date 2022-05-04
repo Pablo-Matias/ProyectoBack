@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -40,7 +39,8 @@ public class PersonaController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<PersonaModel> update(@PathVariable(value = "id") int id, @Validated @RequestBody PersonaModel persona) {
+    public ResponseEntity<PersonaModel> update(@PathVariable(value = "id") int id,
+            @Validated @RequestBody PersonaModel persona) {
         if (id == persona.idpersona) {
             PersonaModel taskNew = personaService.save(persona);
             return ResponseEntity.ok().body(taskNew);
@@ -49,16 +49,8 @@ public class PersonaController {
         }
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity delete(@PathVariable Integer id){
-        ResponseEntity response = null;
-        if(PersonaService.getById(id) == null) {
-            response = new ResponseEntity(HttpStatus.NOT_FOUND); // 404 not found se podria cambiar por un mensaje personalizado?
-        }
-        else{
-            PersonaService.delete(id);
-            response= ResponseEntity.ok("Se eliminó la persona con Id " + id);
-        }
-        return response;
-    }
+    //@DeleteMapping("/{id}")
+    //public void delete(@PathVariable int id) {
+    //    PersonaService.delete(id);
+    //}
 }

@@ -30,6 +30,10 @@ public class PersonaService {
         }
     }
 
+    public PersonaModel getByUsername(String username) {
+        return personaRepo.findByUsername(username);
+    }
+
     public PersonaModel save(PersonaModel persona) {
         return personaRepo.save(persona); // crear o actualizar
     }

@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "persona")
@@ -23,6 +24,8 @@ public class PersonaModel {
     private String fotourl;
     private String username;
     private String password;
+    @Transient
+    private String token;
 
     public PersonaModel(int idpersona, String nombre, String apellido, String email, String titulo, String telefono, String ubicacion, String acerca, String fotourl, String username, String password) {
         this.idpersona = idpersona;
@@ -142,6 +145,15 @@ public class PersonaModel {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
 
     @Override
     public String toString() {

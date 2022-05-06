@@ -27,8 +27,12 @@ public class PortfolioapiApplication {
 			http.csrf().disable()
 				.addFilterAfter(new JWTAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class)
 				.authorizeRequests()
+				.antMatchers(HttpMethod.GET, "/**").permitAll()
 				.antMatchers(HttpMethod.POST, "/api/login").permitAll()
-				.anyRequest().authenticated();
+				.antMatchers(HttpMethod.POST, "/**").authenticated()
+				.antMatchers(HttpMethod.PUT, "/**").authenticated()
+				.antMatchers(HttpMethod.DELETE, "/**").authenticated();
+				//.anyRequest().authenticated();
 		}
 	}
 

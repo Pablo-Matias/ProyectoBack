@@ -41,5 +41,13 @@ public class LaboralService {
     //public void delete(long id){
     //    expeRepo.deleteById(id);
     //}
-    
+    public boolean delete(int id) {
+        try {
+            expeRepo.deleteById(id); 
+            return true;
+        } catch(Exception err){
+            return false;
+        }
+    } 
+
 }

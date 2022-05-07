@@ -33,4 +33,12 @@ public class ProyectoService {
     public ProyectoModel save(ProyectoModel proyecto) {
         return proyectoRepo.save(proyecto); // crear o actualizar
     }
+    public boolean delete(int id) {
+        try {
+            proyectoRepo.deleteById(id);
+            return true;
+        } catch(Exception err){
+            return false;
+        }
+    }
 }

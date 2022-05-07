@@ -32,8 +32,16 @@ public class SkillServices {
         return skillRepo.save(skill); // crear o actualizar
     }
 
-    public void delete(int id) {
+ //   public void delete(int id) {
+ //       skillRepo.deleteById(id);
+ //   }
+ public boolean delete(int id) {
+    try {
         skillRepo.deleteById(id);
+        return true;
+    } catch(Exception err){
+        return false;
     }
+}
 
 }

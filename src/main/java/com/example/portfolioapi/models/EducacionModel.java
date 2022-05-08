@@ -17,7 +17,7 @@ public class EducacionModel {
     private String institucion; 
     private String institucionurl;
     private String fotourl;
-    private String persona;
+    private int persona;
   
 
     public EducacionModel( int ideducacion, String titulo, LocalDate fechafin, String institucion, String institucionurl, String fotourl, String persona)

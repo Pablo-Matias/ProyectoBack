@@ -20,7 +20,7 @@ public class EducacionModel {
     private int persona;
   
 
-    public EducacionModel( int ideducacion, String titulo, LocalDate fechafin, String institucion, String institucionurl, String fotourl, String persona)
+    public EducacionModel( int ideducacion, String titulo, LocalDate fechafin, String institucion, String institucionurl, String fotourl, int persona)
      {
         this.ideducacion = ideducacion;
         this.titulo = titulo;
@@ -35,7 +35,7 @@ public class EducacionModel {
                
     }
 
-    public EducacionModel( String titulo, LocalDate fechafin, String institucion, String institucionurl, String fotourl, String persona)
+    public EducacionModel( String titulo, LocalDate fechafin, String institucion, String institucionurl, String fotourl, int persona)
     {
        this.titulo = titulo;
        this.fechafin = fechafin;
@@ -94,11 +94,11 @@ public class EducacionModel {
     }
 
 
-    public String getPersona() {
+    public int getPersona() {
         return persona;
     }
 
-    public void setPersona(String persona) {
+    public void setPersona(int persona) {
         this.persona = persona;
     }
 

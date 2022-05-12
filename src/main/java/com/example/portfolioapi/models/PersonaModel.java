@@ -22,12 +22,13 @@ public class PersonaModel {
     private String ubicacion;
     private String acerca;
     private String fotourl;
+    private String coverurl;
     private String username;
     private String password;
     @Transient
     private String token;
 
-    public PersonaModel(int idpersona, String nombre, String apellido, String email, String titulo, String telefono, String ubicacion, String acerca, String fotourl, String username, String password) {
+    public PersonaModel(int idpersona, String nombre, String apellido, String email, String titulo, String telefono, String ubicacion, String acerca, String fotourl, String coverurl, String username, String password) {
         this.idpersona = idpersona;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -37,11 +38,12 @@ public class PersonaModel {
         this.ubicacion = ubicacion;
         this.acerca = acerca;
         this.fotourl = fotourl;
+        this.coverurl = coverurl;
         this.username = username;
         this.password = password;
     }
 
-    public PersonaModel(String nombre, String apellido, String email, String titulo, String telefono, String ubicacion, String acerca, String fotourl, String username, String password) {
+    public PersonaModel(String nombre, String apellido, String email, String titulo, String telefono, String ubicacion, String acerca, String fotourl, String coverurl, String username, String password) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
@@ -50,6 +52,7 @@ public class PersonaModel {
         this.ubicacion = ubicacion;
         this.acerca = acerca;
         this.fotourl = fotourl;
+        this.coverurl = coverurl;
         this.username = username;
         this.password = password;
     }
@@ -128,6 +131,14 @@ public class PersonaModel {
 
     public void setFotourl(String fotourl) {
         this.fotourl = fotourl;
+    }
+
+    public String getCoverurl() {
+        return coverurl;
+    }
+
+    public void setCoverurl(String fotourl) {
+        this.coverurl = fotourl;
     }
 
     public String getUsername() {
